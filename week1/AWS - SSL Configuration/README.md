@@ -24,6 +24,7 @@ Buat folder kemudian di dalamnya buat file untuk menyimpan api key cloudflare.
 Di dalam file masukkan email dan api key.
 
 > dns_cloudflare_email = "youremail@example.com"
+> 
 > dns_cloudflare_api_key = "4003c330b45f4fbcab420eaf66b49c5cbcab4"
 
 ![image](https://user-images.githubusercontent.com/88620315/138648713-adb6538f-edb6-4393-8a0d-0c86c2efa09c.png)
