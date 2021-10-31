@@ -5,9 +5,13 @@
 
 
 #git clone
-git config --global user.name “Nicky-Dar”
-git config --global user.email “Nicholausnicky.nicky@gmail.com”
-git config –list
+
+>git config --global user.name “Nicky-Dar”
+
+>git config --global user.email “Nicholausnicky.nicky@gmail.com”
+
+>git config –list
+
 ![image](https://user-images.githubusercontent.com/88620315/139599852-2e439fdb-5375-4d42-87e1-2889f3015db5.png)
 ![image](https://user-images.githubusercontent.com/88620315/139599856-833bc57e-4294-4662-af01-4865cab55851.png)
 
@@ -22,6 +26,7 @@ Config file in config.json
 > scp -r dumbplay.sql nicky@3.226.103.32:/home/nicky/
 
 ![image](https://user-images.githubusercontent.com/88620315/139599895-39efdd19-c2f3-4312-9a4a-501ae5b4813b.png)
+
 ![image](https://user-images.githubusercontent.com/88620315/139599901-b0019bb6-8815-43c5-9039-27344442dac5.png)
 
 Install sequelize pada backend
