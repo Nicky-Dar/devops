@@ -23,6 +23,8 @@ Config file in config.json
 >nano config.json
 
 ![image](https://user-images.githubusercontent.com/88620315/139599878-1e022679-6eda-42b4-a3e4-8c4b25dbbd9c.png)
+![image](https://user-images.githubusercontent.com/88620315/139706194-e6135b76-cad2-4f0f-aa38-d23b0899af1e.png)
+
 > scp -r dumbplay.sql nicky@3.226.103.32:/home/nicky/
 
 ![image](https://user-images.githubusercontent.com/88620315/139599895-39efdd19-c2f3-4312-9a4a-501ae5b4813b.png)
