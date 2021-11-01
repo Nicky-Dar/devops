@@ -4,7 +4,7 @@
 - Import database with sequelize
 
 
-#git clone
+# git clone
 
 >git config --global user.name “Nicky-Dar”
 
