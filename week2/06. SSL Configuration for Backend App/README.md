@@ -27,3 +27,5 @@ pilih 1 ( nginx )
 ![image](https://user-images.githubusercontent.com/88620315/139676363-357c36e7-9a23-429c-9b13-189bd5a2bccf.png)
 
 ![image](https://user-images.githubusercontent.com/88620315/139676435-72912702-fc16-4518-aed4-e0501998d200.png)
+
+![image](https://user-images.githubusercontent.com/88620315/140001755-a45218ef-214b-4c1b-b9bb-57de6f668fd4.png)
