@@ -94,10 +94,7 @@ Buat file untuk instalasi docker di server
 ```
 ---
 - name: Setup Docker & Docker Compose
-  hosts: 
-    - 34.234.96.16
-    - 18.206.212.60 
-    - 18.212.91.197 
+  hosts: all 
   become: true
   tasks:
     - name: Update system
@@ -137,17 +134,57 @@ Buat file untuk instalasi docker di server
         - docker-ce-cli
         - containerd.io
 
-    - name: Install stable release docker compose
-      shell: "sudo curl -L 'https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)' -o /usr/local/bin/docker-compose"
-      args:
-        executable: /bin/bash
 
-    - name: Apply executable permission to the binary
-      shell: "sudo chmod +x /usr/local/bin/docker-compose"
-      args:
-        executable: /bin/bash
 ```
  jalankan docker.yml
 `ansible-playbook docker.yml`
  
 ![image](https://user-images.githubusercontent.com/88620315/141708871-34c6e80f-8ff1-455e-aafc-b6331821ea74.png)
+
+### Clone aplikasi
+```
+---
+- name: Frontend & Backend
+  hosts: 18.206.212.60
+  become: true
+  tasks:
+    - name: Update system
+      apt:
+        update_cache: yes
+
+    - name: Upgrade system
+      apt:
+        upgrade: dist
+
+    - name: Clone frontend
+      shell: "git clone https://github.com/Nicky-Dar/dumbplay-frontend.git frontend"
+      args:
+        executable: /bin/bash
+
+    - name: Clone Backend 
+      shell: "git clone https://github.com/Nicky-Dar/dumbplay-backend.git backend"
+      args:
+        executable: /bin/bash
+```
+
+![image](https://user-images.githubusercontent.com/88620315/141874864-4f81c7c3-f6c9-4267-963d-de0b35fd3cff.png)
+
+### Install Jenkins
+```
+---
+- name : setup jenkins
+  hosts:
+    - 18.212.91.197
+  become: true
+  tasks:
+        - name: install jenkins
+          shell: docker run --name ci-cd -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins
+
+```
+![image](https://user-images.githubusercontent.com/88620315/141874918-ca53f8d3-7c5e-4041-81b8-0d6b630b8d79.png)
+
+![image](https://user-images.githubusercontent.com/88620315/141874926-394953dd-11bf-418b-89e3-3ba7e4d61ec1.png)
+
+![image](https://user-images.githubusercontent.com/88620315/141874936-38c53141-e1b7-43cb-a39d-18700eb8306d.png)
+
+
