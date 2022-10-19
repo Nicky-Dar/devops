@@ -92,3 +92,12 @@ Remote:
 >ssh -I [key.pem] [user(default: ubuntu)]@[IP]
 
 ![image](https://user-images.githubusercontent.com/88620315/138587294-75caa3ff-2cf0-4f1a-b527-428ebf1838df.png)
+
+
+Edit the /etc/ssh/sshd_config and modify or add the following line:
+
+  PasswordAuthentication yes
+Restart the SSH server for the new configuration to take effect:
+
+sudo /etc/init.d/ssh force-reload
+sudo /etc/init.d/ssh restart
